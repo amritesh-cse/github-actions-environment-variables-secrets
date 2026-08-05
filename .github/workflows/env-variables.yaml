@@ -12,9 +12,9 @@ jobs:
     env:
       Greeting: Hello
     steps:
-      - name: "Say Hello Mona it's Monday"
-        run: |
-          echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-          echo " ${{ env.Greeting }} ${{ env.First_Name }}. Today is ${{ env.DAY_OF_WEEK }}!"
+      - name: "Output using runner specific syntax"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+      - name: "Output using Github Actions context syntax"
+        run: echo " ${{ env.Greeting }} ${{ env.First_Name }}. Today is ${{ env.DAY_OF_WEEK }}!"
         env:
           First_Name: Mona
