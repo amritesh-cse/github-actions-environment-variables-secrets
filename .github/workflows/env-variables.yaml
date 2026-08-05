@@ -1,8 +1,6 @@
 name: Environment Variables
-
 on:
   workflow_dispatch
-
 env:
   DAY_OF_WEEK: Monday
   First_Name: Rosie
@@ -13,8 +11,8 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Output using runner specific syntax"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        run: echo "$Greetng $First_Name. Today is $DAY_OF_WEEK!"
         env:
-          First_Name: Mona
+          First_Name: Moa
       - name: "Output using Github Actions context syntax"
         run: echo "${{ env.Greeting }} ${{ env.First_Name }}. Today is ${{ env.DAY_OF_WEEK }}!"
