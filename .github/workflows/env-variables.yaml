@@ -13,6 +13,6 @@ jobs:
       - name: "Output using runner specific syntax"
         run: echo "$Greetng $First_Name. Today is $DAY_OF_WEEK!"
         env:
-          First_Name: Moa
+          First_Name: Mona
       - name: "Output using Github Actions context syntax"
         run: echo "${{ env.Greeting }} ${{ env.First_Name }}. Today is ${{ env.DAY_OF_WEEK }}!"
