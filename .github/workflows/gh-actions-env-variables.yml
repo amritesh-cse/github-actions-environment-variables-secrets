@@ -1,4 +1,4 @@
-name: Variables
+name: GitHub Actions Variables
 on: workflow_dispatch
 jobs:
   test: 
